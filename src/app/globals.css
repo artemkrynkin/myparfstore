@@ -1,0 +1,35 @@
+:root {
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+  'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+  'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+html {
+  height: 100%
+}
+
+body {
+  font-family: var(--font-mono);
+  min-height: 100%;
+}
+
+a {
+  color: #0060cc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0060ccad;
+}

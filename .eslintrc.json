@@ -1,7 +1,105 @@
 {
+  "root": true,
+  "plugins": [
+    "import",
+    "jsx-a11y"
+  ],
   "extends": [
+    "prettier",
     "next",
     "plugin:@next/next/recommended",
-    "prettier"
-  ]
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "rules": {
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          [
+            "builtin"
+          ],
+          "external",
+          [
+            "internal"
+          ],
+          [
+            "parent",
+            "sibling"
+          ],
+          [
+            "index",
+            "object",
+            "type"
+          ]
+        ],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "*",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@mui/**/*",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "@/config/**/*",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/hooks/**/*",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/store/**/*",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/utils/**/*",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/models/**/*",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/context/**/*",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/components/**/*",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/pages/**/*",
+            "group": "internal",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "react"
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  }
 }
+
